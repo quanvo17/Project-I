@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>controller.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/ControllerServlet</url-pattern>
+        <url-pattern>/home</url-pattern>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/logout</url-pattern>
+        <url-pattern>/register</url-pattern>
+        <url-pattern>/dashboard</url-pattern>
+        <url-pattern>/category</url-pattern>
+        <url-pattern>/categorydetail</url-pattern>
+        <url-pattern>/addword</url-pattern>
+        <url-pattern>/insertword</url-pattern>
+        <url-pattern>/insertcategory</url-pattern>
+        <url-pattern>/updateword</url-pattern>
+        <url-pattern>/deleteword</url-pattern>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <jsp-config>
+        <jsp-property-group>
+            <description>JSP configuration</description>
+            <url-pattern>/index.jsp</url-pattern>
+            <url-pattern>/login.jsp</url-pattern>
+            <url-pattern>/register.jsp</url-pattern>
+            <url-pattern>/dashboard.jsp</url-pattern>
+            <url-pattern>/category.jsp</url-pattern>
+            <url-pattern>/categorydetail.jsp</url-pattern>
+            <url-pattern>/search.jsp</url-pattern>
+            <include-prelude>/WEB-INF/jspf/header.jspf</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>
